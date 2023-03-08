@@ -1,3 +1,22 @@
 .moni-page-header {
+  min-width: 1000px;
+  position: absolute;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 30px;
+  left: 300px;
+}
+.moni-header-heading {
+  margin: 0;
+  color: #365481;
+  size: 2rem;
+  font-weight: bold;
+}
+.moni-primary-btn {
+  background-color: #3da4ac;
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 2rem;
 }

@@ -1,10 +1,29 @@
 .moni-list-table {
-  background-color: gray;
+  min-width: 1000px;
+  position: absolute;
+  top: 100px;
+  left: 300px;
+
+  background-color: white;
+  border-radius: 0.5rem;
 }
+
+table,
+tr,
+td,
 th {
-  border: 2px solid black;
-  border-bottom: 1px solid black;
+  border: none;
+}
+
+th {
+  padding: 1rem;
+}
+td {
+  padding: 0.5rem;
 }
 table {
   border-collapse: collapse;
+}
+.moni-table-content {
+  width: 100%;
 }

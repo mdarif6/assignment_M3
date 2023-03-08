@@ -6,12 +6,13 @@ export default function ListTable() {
   const [tableData, setTableData] = useState(MonitaurData);
 
   const modelsData = tableData.models.data;
-  console.log(modelsData[0]);
+  console.log(modelsData);
+
   let keysOfModelObject = Object.keys(modelsData[0]);
 
   return (
     <div className="moni-list-table">
-      <table>
+      <table className="moni-table-content">
         <thead>
           <tr>
             {keysOfModelObject.map((item) => {
