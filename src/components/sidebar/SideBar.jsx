@@ -36,9 +36,9 @@ export default function SideBar() {
         </div>
       </div>
 
-      <div className="moni-sidebar-pagedetail">
+      <div className="moni-sidebar-pagedetail page">
         <div
-          className="moni-sidebar-navicons link-active"
+          className="moni-sidebar-navicons "
           onClick={routeChange1}
           style={
             currentTab === 0
@@ -50,7 +50,7 @@ export default function SideBar() {
           <p>Page 1</p>
         </div>
         <div
-          className="moni-sidebar-navicons"
+          className="moni-sidebar-navicons "
           onClick={routeChange2}
           style={
             currentTab === 1
@@ -63,7 +63,7 @@ export default function SideBar() {
         </div>
       </div>
 
-      <div className="moni-sidebar-logindetail">
+      <div className="moni-sidebar-logindetail account">
         <div className="moni-sidebar-navicons">
           <p>Account</p>
           <i class="fa-regular fa-user"></i>
