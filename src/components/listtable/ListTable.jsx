@@ -1,4 +1,5 @@
 import "./ListTable.css";
+import arrow from "../../assets/images/arrow.jpg";
 import { useState } from "react";
 import MonitaurData from "../../db.json";
 import Table from "../table/Table";
@@ -16,13 +17,23 @@ export default function ListTable() {
         <thead>
           <tr>
             {keysOfModelObject.map((item) => {
-              return <th>{item}</th>;
+              return (
+                <th>
+                  {item === "status" ? (
+                    <>
+                      status <img src={arrow} alt="" />
+                    </>
+                  ) : (
+                    item
+                  )}
+                </th>
+              );
             })}
           </tr>
         </thead>
         <tbody>
-          {modelsData.map((item) => {
-            return <Table item={item} />;
+          {modelsData.map((item, index) => {
+            return <Table item={item} index={index} />;
           })}
         </tbody>
       </table>

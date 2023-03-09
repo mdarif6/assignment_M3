@@ -3,9 +3,10 @@ import normal from "../../assets/images/normal.jpg";
 import caution from "../../assets/images/caution.jpg";
 import alert from "../../assets/images/alert.jpg";
 
-export default function Table({ item }) {
+export default function Table({ item, index }) {
+  console.log(index);
   return (
-    <tr>
+    <tr style={{ backgroundColor: index % 2 !== 0 ? "#FBFBFB" : "#FFFFFF" }}>
       <td>
         {item.status === "pass" ? <img src={normal} alt="" /> : ""}
         {item.status === "fail" ? <img src={alert} alt="" /> : ""}
