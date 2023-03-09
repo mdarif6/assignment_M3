@@ -7,7 +7,7 @@ export default function ListTable() {
   const [tableData, setTableData] = useState(MonitaurData);
 
   const modelsData = tableData.models.data;
-  console.log(modelsData);
+  console.log(tableData, setTableData);
 
   let keysOfModelObject = Object.keys(modelsData[0]);
 

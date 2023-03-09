@@ -2,7 +2,29 @@ import "./SideBar.css";
 
 import logo from "../../assets/images/Vector.svg";
 import navicon from "../../assets/images/Vector2.svg";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 export default function SideBar() {
+  const [currentTab, setCurrentTab] = useState(0);
+  const [bgColor, setBgColor] = useState("#3da4ac;");
+  const [txtColor, setTextColor] = useState("white");
+
+  let navigate = useNavigate();
+  function routeChange2() {
+    setCurrentTab(1);
+    higlightNav();
+    navigate("/secondpage");
+  }
+  function routeChange1() {
+    setCurrentTab(0);
+    higlightNav();
+    navigate("/");
+  }
+
+  function higlightNav() {
+    setBgColor("#3da4ac");
+    setTextColor("white");
+  }
   return (
     <div className="moni-sidebar">
       <div className="moni-sidebar-logodetail">
@@ -15,11 +37,27 @@ export default function SideBar() {
       </div>
 
       <div className="moni-sidebar-pagedetail">
-        <div className="moni-sidebar-navicons link-active">
+        <div
+          className="moni-sidebar-navicons link-active"
+          onClick={routeChange1}
+          style={
+            currentTab === 0
+              ? { backgroundColor: bgColor, color: txtColor }
+              : {}
+          }
+        >
           <img src={navicon} alt="" />
           <p>Page 1</p>
         </div>
-        <div className="moni-sidebar-navicons">
+        <div
+          className="moni-sidebar-navicons"
+          onClick={routeChange2}
+          style={
+            currentTab === 1
+              ? { backgroundColor: bgColor, color: txtColor }
+              : {}
+          }
+        >
           <img src={navicon} alt="" />
           <p>Page 2</p>
         </div>
